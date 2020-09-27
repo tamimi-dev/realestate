@@ -112,7 +112,7 @@ var options2 = {
     tickAmount: 2
   }
 };
-
+  
 var chart2 = new ApexCharts(document.querySelector("#chart-bar"), options2);
 
 chart2.render();

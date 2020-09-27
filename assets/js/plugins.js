@@ -20,7 +20,7 @@ for (var i = 0; i < longerTimeoutBrowsers.length; i += 1) {
     break;
   }
 }
-
+ 
 function microtaskDebounce(fn) {
   var called = false;
   return function () {

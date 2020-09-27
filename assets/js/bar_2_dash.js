@@ -28,7 +28,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/12Lyd3k0PRpe-Ie_LaeJaEPm3F
         pointBackgroundColor: 'rgb(240,236,211)'
       }
 	  ]
-    },
+    }, 
     options: {
       	  maintainAspectRatio: false,
       tooltips: {

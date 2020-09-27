@@ -25,7 +25,7 @@
     if (protoProps) _defineProperties(Constructor.prototype, protoProps);
     if (staticProps) _defineProperties(Constructor, staticProps);
     return Constructor;
-  }
+  } 
 
   function _defineProperty(obj, key, value) {
     if (key in obj) {

@@ -28,7 +28,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/12Lyd3k0PRpe-Ie_LaeJaEPm3F
 	  uk.push(Number(e['gsx$uk']['$t']));
 
   });
-    
+     
     
         var options = {
           series: [

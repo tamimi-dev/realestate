@@ -27,7 +27,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1fgjVhzrbqcCOP8Zls00BV--Js
         borderColor: 'rgb(255, 159, 64)',
         pointBackgroundColor: 'rgb(240,236,211)'
       }
-	  ]
+	  ] 
     },
     options: {
 	    scales: {

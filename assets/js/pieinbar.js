@@ -119,3 +119,4 @@ pieChart.adapter.add("verticalCenter", function(verticalCenter, target) {
   }
   return verticalCenter
 })
+ 
