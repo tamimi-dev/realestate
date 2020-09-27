@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Real Estate Tracker Dashboard</title>
+
+	<!-- Meta Data -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="author" content="Tamimi">
+    <meta name="description" content="Durham Region Real Estate Tracker">
+	
+
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Durham Region Real Estate Tracker">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tamimi-dev.github.io/realestate">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="Real estate Statistics for Durham Region, ON, Canada">
+    <meta property="og:site_name" content="Durham Region Real Estate Tracker">
+	
+<!-- Favicons  -->
+<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="../assets/favicons/manifest.json">
+
+
+	
+    <!-- Styles -->
+
+    <link rel="stylesheet" type="text/css" href="../assets/styles/style-dark_w.css">
+
+
+
+	
+
+	</head>
+<body class="bg-triangles">
+
+	
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #353438;">
+ <a class="navbar-brand" href="/"><img src="../assets/img/icon.png" width="50" height="50" alt="">Durham RealEstate Tracker</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+	  
+	                <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Regions</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="../durham.html">Durham</a>
+          <a class="dropdown-item" href="../oshawa.html">Oshawa</a>
+          <a class="dropdown-item" href="../ajax.html">Ajax</a>
+          <a class="dropdown-item" href="../brock.html">Brock</a>
+          <a class="dropdown-item" href="../clarington.html">Clarington</a>
+		   <a class="dropdown-item" href="../pickering.html">Pickering</a>
+		    <a class="dropdown-item" href="../scugog.html">Scugog</a>
+		      <a class="dropdown-item" href="../uxbridge.html">Uxbridge</a>
+			    <a class="dropdown-item" href="../whitby.html">Whitby</a>
+        </div>
+      </li>
+	  
+	   <li class="nav-item">
+        <a class="nav-link" href="../durham_all.html">Durham Region (overall)</a>
+  </li>
+	  
+	   <li class="nav-item">
+        <a class="nav-link" href="../gta.html">GTA</a>
+  </li>
+	  
+	  	  
+	  
+		  	
+
+
+            <li class="nav-item">
+        <a class="nav-link" href="../about.html">About</a>
+      </li>
+
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+
+	    
+
+    </ul>
+    
+
+  </div>
+</nav>
+    <!-- Preload -->
+ <script>
+       $(window).bind("load", function () {
+        $('#work-in-progress').fadeOut(100);
+    });
+      </script>
+
+
+      <div id="work-in-progress">
+   <div class="preloader">
+	    <div class="preloader__wrap">
+		    <div class="circle-pulse">
+                <div class="circle-pulse__1"></div>
+                <div class="circle-pulse__2"></div>
+            </div>
+		    <div class="preloader__progress"><span></span></div>
+		</div>
+	</div>
+      </div>
+	
+
+    <main class="main">
+	    <div class="col-12 col-sm-12 col-md-12 col-xl-12 container gutter-top">
+                  				 <p>Durham Region Market Trends</p>
+                             <div  class="text-center">
+    <h6> <small>Data as of: </small></h6> 
+    <h6 id="update" class="clock"></h6>  
+				   
+    </div>
+                    
+
+
+		    <div class="row sticky-parent">
+			    
+
+			  <!-- top line start -->
+           <div class="col-lg-12 col-xl-12">
+             <div class="box-inner box-inner--rounded">
+				    <div class="box shadow pb-0">
+          
+          
+           <div class="row">
+          
+          
+    <!-- //// -->       
+          
+ <div class="col-lg-3 col-xl-3">           
+              <div class="box box__second">
+<h2 class="title title--h5">Avg Sale Price</h2>
+
+ 
+ <div class="text-center">
+<table class="table1" align="center">
+        <tr>
+<th id="death"></th>
+        </tr>
+	  
+
+</table>
+
+</div>
+
+</div>
+          
+         </div>         
+          
+          
+     <!-- //// -->          
+          
+          
+          
+ <div class="col-lg-3 col-xl-3">           
+              <div class="box box__second">
+<h2 class="title title--h5">Change In Price</h2>
+
+ <div class="text-center">
+										
+										<table class="table6" align="center">
+        <tr>
+<th id="confir"></th>
+        </tr>
+	  
+
+</table>
+										
+										
+ </div>
+
+</div>
+          
+         </div>         
+          
+    <!-- //// -->           
+          
+     <div class="col-lg-3 col-xl-3">           
+              <div class="box box__second">
+<h2 class="title title--h5">Change In Sales</h2>
+
+										<div class="text-center">
+										
+										<table class="table3" align="center">
+        <tr>
+<th id="seri"></th>
+        </tr>
+	  
+
+</table>
+										
+										
+ </div>
+
+</div>
+          
+         </div>
+     
+     
+     
+
+       <!-- ////   -->   
+         
+<div class="col-lg-3 col-xl-3">
+
+<div class="box box__second ">
+<h2 class="title title--h5">Months Of Inventory</h2>
+
+										<div class="text-center">
+										
+										<table class="table4" align="center">
+        <tr>
+<th id="recov"></th>
+        </tr>
+	  
+
+</table>
+										
+										
+ </div>
+
+</div>
+</div>
+
+
+
+    <!-- //// -->     
+
+                </div>
+            <!-- row ended --> 
+          
+           </div>
+           </div>
+             </div>
+          <!-- top line end -->
+
+            <!-- 2nd line start -->
+           <div class="col-lg-12 col-xl-12">
+             <div class="box-inner box-inner--rounded">
+				    <div class="box shadow pb-0">
+          
+          
+           <div class="row">
+          
+          
+    <!-- //// -->       
+          
+ <div class="col-lg-4 col-xl-4">           
+               <div class="box box__second">
+<h2 class="title title--h5">China Vs The World - Cases <a class="btn" href="../world.html"><i class=""></i>Details</a></h2>
+
+ <div class="text-center">
+<div id="chartwc"></div>
+
+</div>
+
+</div>
+          
+         </div>         
+          
+          
+     <!-- //// -->          
+          
+          
+          
+ <div class="col-lg-4 col-xl-4 ">           
+             <div class="box box__second">
+<h2 class="title title--h5">Top 10 Countries - Cases</h2>
+
+ <div class="text-center">
+<div id="chart10c"></div>
+
+</div>
+
+</div>
+         </div>         
+          
+    <!-- //// -->           
+          
+     <div class="col-lg-4 col-xl-4 ">           
+              <div class="box box__second">
+<h2 class="title title--h5">PHEIC Level <a class="btn" href="../notices.html"><i class=""></i>Details</a></h2>
+
+								 <div id="gauge"></div>
+         
+            </div>
+
+</div>
+          
+         </div>
+     
+     
+     
+
+     
+
+      <!-- //// -->       
+          
+          
+                </div>
+            <!-- row ended --> 
+          
+           </div>
+           </div>
+            
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+           <!--////col start///// -->
+          
+          
+          
+			    <!-- Sidebar -->
+
+				
+				<!--////col end///// -->
+				
+				
+				 <!--////col start///// -->
+				
+						        <div class="col-lg-6 col-xl-6">
+				    <div class="box shadow pb-0">
+					    <!-- Menu -->
+						
+
+            
+            
+					    <!-- Title -->
+						<div class="pb-3">
+		                    <h1 class="title title--h1 title__separate">Cases Worldwide <a class="btn" href="../world.html"><i class=""></i>Details</a></h1>    
+					    </div>
+
+<div class="box-inner box-inner--rounded">
+
+ <div class="row">
+
+<div class="col-lg-12 col-xl-12">           
+              <div class="box box__second">
+<h2 class="title title--h3">Confirmed Cases</h2> 
+ 
+ <div class="text-center">
+
+<div class="box box__second">
+
+ <div id="chartdiv"></div>
+</div>
+
+</div>
+
+</div>
+          
+         </div>
+</div>
+	 
+	 
+	 
+	  <!--/// -->
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 <h1 class="title title--h1 title__separate">Worldwide Accumulated Data and Daily Increase</h1>
+	 <div class="row">
+	 <div class="col-lg-6 col-xl-6">    
+    
+					  
+              
+              
+          
+   <div class="box box__second">
+<div class="wrapper">
+	
+<canvas id="canvas"></canvas>
+</div>
+
+									</div>  
+                  
+  
+</div>    
+
+
+
+
+	 <div class="col-lg-6 col-xl-6">    
+    
+					  
+              
+              
+          
+   <div class="box box__second">
+<div class="wrapper">
+	
+<canvas id="canvas_dth"></canvas>
+</div>
+
+									</div>  
+                  
+  
+</div>   
+
+
+
+          
+             
+  </div>               
+                  
+                  
+                  
+                  
+                  
+                  <!--/// --> 
+           
+	   <h1 class="title title--h1 title__separate">Cases in Major Countries (Exclude China)</h1>
+		   
+          <div class="row">        
+          <div class="col-lg-12 col-xl-12">      
+	 
+
+
+
+
+    <div class="box box__second">
+<div class="wrapper">
+	
+<div id="canvas3"></div>
+</div>
+
+									</div> 
+	 
+   
+   
+    </div> 
+    </div> 
+    <!--/// -->
+	 	</div>  
+  </div>                             
+  </div>                             
+	
+						
+						  </div>
+
+	
+						</div>
+				
+						
+						
+						
+						
+
+ </div>
+						</div>						
+	
+						
+						
+			
+
+	
+    </main>
+
+
+
+	<!-- JavaScripts -->
+	<script src="../assets/js/jquery-3.4.1.min.js"></script>
+	<script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/common.js"></script>
+
+
+
+
+
+
+ 
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<!-- <script src="../assets/js/web/pie_w_c.js"></script>
+   <script src="../assets/js/web/pie_t10_c.js"></script> -->
+  
+  <script src="../assets/js/all_ex_ch.js"></script>
+  
+    
+				
+	
+	 <script src="../assets/js/Chart.bundle.min.js"></script>
+	<script src="../assets/js/bar_2_dash_vert.js"></script>
+		<script src="../assets/js/bar_2_dash_vert_dth.js"></script>
+	<script src="../assets/js/bar_line.js"></script>
+	
+	
+  
+  
+  
+ 
+  
+ 
+	<script src="../assets/js/clck.js"></script> 
+    <script src="../assets/js/progressbar.min.js"></script>
+</body>
+
+</html>

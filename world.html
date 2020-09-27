@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>COVID19 Tracker Dashboard</title>
+
+	<!-- Meta Data -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="author" content="Tamimi">
+    <meta name="description" content="Coronavirus COVID19 trackers, Full statistics, dashboard, latest cases and deaths worldwide"">
+	
+	  <!-- Twitter data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@corona_tracker">
+    <meta name="twitter:title" content="Coronavirus trackers">
+    <meta name="twitter:description" content="Coronavirus COVID19 trackers, Full statistics, dashboard, latest cases and deaths worldwide">
+    <meta name="twitter:image" content="https://coronatrackers.com/assets/img/twit_banner.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Coronavirus trackers">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://coronatrackers.com">
+    <meta property="og:image" content="https://coronatrackers.com/assets/img/twit_banner.png">
+    <meta property="og:description" content="Coronavirus COVID19 trackers, Full statistics, dashboard, latest cases and deaths worldwide">
+    <meta property="og:site_name" content="Coronavirus COVID19 trackers">
+									
+<!-- Favicons  -->
+<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="../assets/favicons/manifest.json">
+
+
+    <!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="../assets/styles/style_w.css">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/style-dark_w.css">
+
+
+<script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="coronatrackers" data-description="Support the service" data-message="Thank you for your support!" data-color="#FF5F5F" data-position="right" data-x_margin="15" data-y_margin="15"></script>	
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MKLRG3V');</script>
+<!-- End Google Tag Manager -->
+	
+</head>
+<body class="bg-triangles">
+	
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKLRG3V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+         <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #353438;">
+ <a class="navbar-brand" href="/"><img src="../assets/img/icon.png" width="50" height="50" alt="">CoronaVirus Tracker</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+	  
+	                <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Graphs</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="../world.html">WorldWide</a>
+          <a class="dropdown-item" href="../china.html">China</a>
+          <a class="dropdown-item" href="../us.html">US</a>
+          <a class="dropdown-item" href="../canada.html">Canada</a>
+		   <a class="dropdown-item" href="../germany.html">Germany</a>
+		    <a class="dropdown-item" href="../italy.html">Italy</a>
+		      <a class="dropdown-item" href="../australia.html">Australia</a>
+			    <!-- <a class="dropdown-item" href="../samerica.html">South America</a> -->
+        </div>
+      </li>
+	  
+	   <li class="nav-item">
+        <a class="nav-link" href="../dashboard.html">Dashboard</a>
+  </li>
+	  
+	   <li class="nav-item">
+        <a class="nav-link" href="../hl.html">High Level Statistics</a>
+  </li>
+	  
+	  	   <li class="nav-item">
+        <a class="nav-link" href="../tl.html">Cases Time Line</a>
+  </li>
+	  
+		  	   <li class="nav-item">
+        <a class="nav-link" href="../pc.html">Per Country Statistics</a>
+  </li>
+  
+
+      <li class="nav-item">
+        <a class="nav-link" href="../notices.html">Notices</a>
+  </li>
+            <li class="nav-item">
+        <a class="nav-link" href="../about.html">About</a>
+      </li>
+
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item avatar">
+        <a class="nav-link p-0 waves-effect waves-light" href="http://patreon.com/coronatracker">
+          <img src="../assets/img/patreon.svg" class="rounded-circle z-depth-0"
+            alt="avatar image" height="35">
+        </a>
+      </li>
+	    
+	          <li class="nav-item avatar">
+        <a class="nav-link p-0 waves-effect waves-light" href="../android.html">
+          <img src="../assets/img/android.svg" class="rounded-circle z-depth-0"
+            alt="avatar image" height="35">
+        </a>
+      </li>
+	    
+	    
+      <li class="nav-item avatar">
+        <a class="nav-link p-0 waves-effect waves-light" href="https://twitter.com/corona_tracker">
+          <img src="../assets/img/twitter.svg" class="rounded-circle z-depth-0"
+            alt="avatar image" height="35">
+        </a>
+      </li>
+    </ul>
+    
+
+  </div>
+</nav>
+
+    <!-- Preload -->
+
+
+    <main class="main">
+	    <div class="col-12 col-sm-12 col-md-12 col-xl-12 container gutter-top">
+                  				 
+                          <div  class="text-center">
+    <h6> <small>LAST UPDATE (GMT): </small></h6> 
+    <h6 id="update" class="clock"></h6>  
+				  <p>This Tracker has been tracking the CoronaVirus cases since Jan/24, when total cases were 364 cases worldwide.</p>
+    </div>          
+                    
+
+
+		    <div class="row sticky-parent">
+			
+			    
+			    <div class="col-lg-12 col-xl-12">
+      <div id=chert>
+          </div>
+        </div>
+
+<!-- Content -->
+		        <div class="col-lg-12 col-xl-12">
+				    <div class="box shadow pb-0">
+					    <!-- Menu -->
+						
+
+            
+            
+					    <!-- Title -->
+
+
+<div class="box-inner box-inner--rounded">
+
+ <div class="col-12 col-lg-12">
+
+     
+   
+   
+
+
+   
+   
+
+   
+   
+   
+   <div class="pb-3">
+		                    <h1 class="title title--h1 title__separate">Interactive Map For The Cases</h1>      
+					    </div>
+   
+     <!-- Row 3D start-->
+     
+  <div class="row">
+
+<div class="col-lg-12 col-xl-12">           
+              <div class="box box__second">
+<h2 class="title title--h3">Confirmed Cases</h2>
+
+ 
+ <div class="text-center">
+
+<div class="box box__second">
+
+ <div id="chartdiv"></div>
+</div>
+
+</div>
+
+</div>
+          
+         </div>
+</div>
+        
+          <!-- Row 3D end-->
+		  
+		  
+	  <!-- graphs start-->	 
+
+
+ <div class="col-12 col-lg-12">
+
+
+   <div class="pb-3">
+   
+    <h1 class="title title--h1 title__separate">Worldwide Cases and Deaths</h1>
+       <!--      <h2 class="title title--h3">Daily Increase and Accumulated Cases</h2>    -->
+					    </div>
+              
+              
+      <h2 class="title title--h3">Accumulated Total Cases and Daily Increase</h2>    
+   <div class="box box__second">
+<div class="wrapper">
+	
+<canvas id="canvas"></canvas>
+</div>
+
+									</div>
+									
+									
+								      <h2 class="title title--h3">Accumulated Total Deaths and Daily Increase</h2>    
+   <div class="box box__second">
+<div class="wrapper">
+	
+<canvas id="canvas_dth"></canvas>
+</div>
+
+									</div>	
+									
+									
+									
+     <!-- Row meter start -->
+     
+  <div class="pb-3">
+   
+    <h1 class="title title--h1 title__separate">Cases and Deaths with +/- Changes</h1>
+     
+					    </div>
+
+
+
+
+<h2 class="title title--h3">WorldWide Cases</h2>
+<div class="box box__second">
+<div class="box box__second">
+<div class="wrapper">
+	
+  <div id="chart-area">
+
+  </div>
+  <div id="chart-bar">
+
+  </div>
+
+          <!-- Row meter start -->
+   			</div>
+			
+		    </div> 	
+			
+   
+   
+  </div>
+  
+  
+  <h2 class="title title--h3">WorldWide Deaths</h2>
+<div class="box box__second">
+<div class="box box__second">
+<div class="wrapper">
+	
+  <div id="chart-area_dth">
+
+  </div>
+  <div id="chart-bar_dth">
+
+  </div>
+
+          <!-- Row meter start -->
+   			</div>
+			
+		    </div> 	
+			
+   
+   
+  </div>
+  
+  
+  
+  <!--/// -->
+	 
+	   <div class="pb-3">
+   
+    <h1 class="title title--h1 title__separate">Major Countries</h1>
+     
+					    </div>
+	 
+	   <h2 class="title title--h3">Cases in Major countries (Exclude China)</h2>
+
+    <div class="box box__second">
+<div class="wrapper">
+	
+<div id="canvas3"></div>
+</div>
+
+									</div> 
+	 
+	 
+	 
+	 
+   
+   
+    <!--/// -->
+   
+        <h2 class="title title--h3">% Daily Change in Cases (Logarithmic Scale)</h2>
+
+    <div class="box box__second">
+<div class="wrapper">
+	
+<canvas id="canvas2"></canvas>
+</div>
+
+									</div>
+   
+   
+  <!--/// -->
+	 
+	 
+	   <div class="pb-3">
+   
+    <h1 class="title title--h1 title__separate">Total tests per Country</h1>
+     
+					    </div>
+
+
+    <div class="box box__second">
+
+<div id="chart_test" ></div> 
+
+
+									</div> 
+	 
+	 
+<br>
+
+
+</div>						
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	  <!-- graphs end	--> 
+
+
+
+
+
+
+
+		 
+		  
+	 <!-- Pie world cases start here -->
+ 	   <div class="pb-3">
+   
+    <h1 class="title title--h1 title__separate">Cases / Deaths Comparisons</h1>
+     
+					    </div>
+ <div class="row">
+ 
+   <!-- box cases start -->
+<div class="col-lg-6 col-xl-6">           
+              <div class="box box__second">
+<h2 class="title title--h3">China Vs The World - Cases</h2>
+
+ <div class="text-center">
+<div id="chartwc"></div>
+
+</div>
+
+</div>
+          
+         </div>
+ <!-- box end -->   
+
+ 
+  <!-- box deaths start -->
+<div class="col-lg-6 col-xl-6 ">           
+              <div class="box box__second">
+<h2 class="title title--h3">China Vs The World - Deaths</h2>
+
+ <div class="text-center">
+										
+<div id="chartwd"></div>
+										
+										
+ </div>
+
+</div>
+          
+         </div>
+ <!-- box end -->   
+ 
+
+
+   
+  </div>
+  
+ <!-- Pie world cases end here -->
+  
+		  
+		  
+		  
+		  
+		  
+		 <!-- Pie 10  start here -->
+ 
+ <div class="row">
+ 
+   <!-- box cases start -->
+<div class="col-lg-6 col-xl-6">           
+              <div class="box box__second">
+<h2 class="title title--h3">Top 10 Countries - Cases</h2>
+
+ <div class="text-center">
+<div id="chart10c"></div>
+
+</div>
+
+</div>
+          
+         </div>
+ <!-- box end -->   
+
+ 
+  <!-- box deaths start -->
+<div class="col-lg-6 col-xl-6 ">           
+              <div class="box box__second">
+<h2 class="title title--h3">Top 10 Countries - Deaths</h2>
+
+ <div class="text-center">
+										
+<div id="chart10d"></div>
+										
+										
+ </div>
+
+</div>
+          
+         </div>
+ <!-- box end -->   
+ 
+
+
+   
+  </div>
+  
+ <!-- Pie 10 cases end here -->
+  	  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+   
+   </div>   
+   
+   
+  </div>
+
+	
+						</div>
+
+
+						</div>						
+	
+						
+						
+					</div>
+					
+		        
+				</div>
+	
+    </main>
+
+
+
+	<!-- JavaScripts -->
+	<script src="../assets/js/web/jquery-3.4.1.min.js"></script>
+	<script src="../assets/js/web/plugins.js"></script>
+    <script src="../assets/js/web/common.js"></script>
+<script src="../assets/js/web/all_scd.js"></script>
+
+    <script src="../assets/js/web/Chart.bundle.min.js"></script>
+	<script src="../assets/js/web/bar_2_dash.js"></script>
+		<script src="../assets/js/web/bar_2_dash_dth.js"></script>
+	<script src="../assets/js/web/bar_line.js"></script>
+
+       <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	       <script src="../assets/js/web/line_bar.js"></script>
+		    <script src="../assets/js/web/line_bar_dth.js"></script>
+	<script src="../assets/js/web/all_ex_ch.js"></script>
+	<script src="../assets/js/web/pie_t10_c.js"></script>
+	<script src="../assets/js/web/pie_t10_d.js"></script>
+	<script src="../assets/js/web/pie_w_c.js"></script>
+	<script src="../assets/js/web/pie_w_d.js"></script>
+	<script src="../assets/js/web/bar_tests.js"></script>
+	
+<script src="../assets/js/amcharts/core.js"></script>
+<script src="../assets/js/amcharts/maps.js"></script>
+<script src="../assets/js/amcharts/worldLow.js"></script>
+<script src="../assets/js/amcharts/material.js"></script>
+<script src="../assets/js/amcharts/animated.js"></script>
+	<script src="../assets/js/amcharts/dark.js"></script>
+			 <script src="../assets/js/web/rotating.js"></script>
+	<script src="../assets/js/web/chert.js"></script>
+<script src="../assets/js/web/clck.js"></script> 
+
+</body>
+
+</html>
