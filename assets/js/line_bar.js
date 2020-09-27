@@ -9,6 +9,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1fgjVhzrbqcCOP8Zls00BV--Js
 	numbers2.push(Number(e['gsx$dincreaseall']['$t']));
   }); 
   
+  
 var options1 = {
   chart: {
     id: "chart2",
