@@ -72,7 +72,7 @@ chart1.render();
 var options2 = {
   chart: {
     id: "chart1",
-    height: 130,
+    height: 170,
     type: "bar",
     foreColor: "#ccc",
     brush: {
