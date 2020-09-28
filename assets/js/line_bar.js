@@ -35,7 +35,7 @@ var options1 = {
     }
   },
   dataLabels: {
-    enabled: true
+    enabled: false
   },
   fill: {
     gradient: {
