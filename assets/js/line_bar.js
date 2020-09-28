@@ -30,7 +30,7 @@ var options1 = {
     clipMarkers: false,
     yaxis: {
       lines: {
-        show: false
+        show: true
       }
     }
   },
