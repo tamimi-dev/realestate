@@ -48,7 +48,7 @@ var options1 = {
     size: 3,
     colors: ["#000524"],
     strokeColor: "#00BAEC",
-    strokeWidth: 3
+    strokeWidth: 2
   },
   series: [{
 	  data: numbers2
