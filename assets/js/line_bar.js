@@ -51,6 +51,7 @@ var options1 = {
     strokeWidth: 2
   },
   series: [{
+    Name: "Average Sale Price",
 	  data: numbers2
 	  }],
   tooltip: {
@@ -92,7 +93,7 @@ var options2 = {
   },
   colors: ["#FF0080"],
   series: [{
-    Name: "average Sale Price",
+ 
 	  data: numbers
 	  }],
   stroke: {
