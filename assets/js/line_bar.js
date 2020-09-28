@@ -23,7 +23,7 @@ var options1 = {
   },
   colors: ["#00BAEC"],
   stroke: {
-    width: 3
+    width: 2
   },
   grid: {
     borderColor: "#555",
