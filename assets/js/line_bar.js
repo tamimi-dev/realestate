@@ -1,12 +1,12 @@
 
-$.getJSON("https://spreadsheets.google.com/feeds/list/12Lyd3k0PRpe-Ie_LaeJaEPm3FwF3iz1gizAOSprn7l0/ok01ra6/public/values?alt=json", data => {
+$.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/1/public/values?alt=json", data => {
   var labels1 = [];
   var numbers = [];
    var numbers2 = [];
   data.feed.entry.forEach(e => {
-    labels1.push(e['gsx$timecase']['$t']);
-    numbers.push(Number(e['gsx$percinc']['$t']));
-	numbers2.push(Number(e['gsx$dincreaseall']['$t']));
+    labels1.push(e['gsx$date']['$t']);
+    numbers.push(Number(e['gsx$changeavgsalepricesalldrhm']['$t']));
+	numbers2.push(Number(e['gsx$avgsalepricesalldrhm']['$t']));
   }); 
   
 
