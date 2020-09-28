@@ -92,6 +92,7 @@ var options2 = {
   },
   colors: ["#FF0080"],
   series: [{
+    Name: "average Sale Price",
 	  data: numbers
 	  }],
   stroke: {
