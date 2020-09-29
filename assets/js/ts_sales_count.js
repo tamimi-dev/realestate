@@ -9,7 +9,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
 
 
   data.feed.entry.forEach(e => {
-    labels.push(e['gsx$date17']['$t']);
+    labels.push(e['gsx$label']['$t']);
 
     soldcount17.push(Number(e['gsx$soldcountsalldrhm17']['$t']));
 //	al17.push(Number(e['gsx$al17']['$t']));
