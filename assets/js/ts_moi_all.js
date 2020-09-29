@@ -39,10 +39,10 @@ function fetchCheckStatus(response) {
       "type": "date",
       "format": "%-d/%-m/%Y" // NEW fixed format
     }, {
-      "name": "DOM Durham",
+      "name": "Months of Inventory Durham",
       "type": "number"
     }, {
-      "name": "DOM Oshawa",
+      "name": "Months of Inventory Oshawa",
       "type": "number"
     }];
   
@@ -52,7 +52,7 @@ function fetchCheckStatus(response) {
   
   function formatJSON_moi_all(entries) {
       var formattedJSON_moi_all = [];
-    entries.forEach(item => formattedJSON_moi_all.push([item.gsx$date.$t, parseFloat(item.gsx$avgdomalldrhm.$t), parseFloat(item.gsx$avgdomallosh.$t)]));
+    entries.forEach(item => formattedJSON_moi_all.push([item.gsx$date.$t, parseFloat(item.gsx$monthsofinventoryalldrhm.$t), parseFloat(item.gsx$monthsofinventoryallosh.$t)]));
     return formattedJSON_moi_all; // NEW return values
   };
   
@@ -78,30 +78,30 @@ function fetchCheckStatus(response) {
           "theme": "candy",
         },
         caption: {
-          text: "Days on Market"
+          text: "Months of Inventory"
         },
         subcaption: {
-          text: "The average days on market on Durham and Oshawa"
+          text: "Months of Inventory on Durham and Oshawa"
         },
         yAxis: [
           {
             plot: {
-              value: "Avg Sale Prices",
+              value: "Months of Inventory",
               type: "line"
             },
-            title: "DOM Durham",
+            title: "Months of Inventory Durham",
             format: {
-              prefix: "days"
+              prefix: "Months"
             }
           },
           {
             plot: {
-              value: "Change in Avg Sale Prices",
+              value: "Months of Inventory",
               type: "line"
             },
-            title: "DOM Oshawa",
+            title: "Months of Inventory Oshawa",
             format: {
-                prefix: "days"
+                prefix: "Months"
               }
           }
         ],
