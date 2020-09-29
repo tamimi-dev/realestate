@@ -19,7 +19,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
 
 var options = {
     chart: {
-        foreColor: "#ccc"
+        foreColor: "#f2f2f2"
     },
     series: [{
     name: 'Active Listing 2017',
@@ -68,14 +68,18 @@ var options = {
   tooltip: {
     y: {
       formatter: function (val) {
-        return " " + val + "Units"
+        return " " + val + " Units"
       }
     },
     theme: "dark"
   },
   grid: {
     borderColor: '#636363',
-  }
+  },
+  theme: {
+    mode: 'dark'
+   
+    }
   };
 
   var chart = new ApexCharts(document.querySelector("#al_drhm_all"), options);
