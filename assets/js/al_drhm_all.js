@@ -19,7 +19,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
 
 var options = {
     chart: {
-        foreColor: "#f2f2f2"
+        //foreColor: "#f2f2f2"
     },
     series: [{
     name: 'Active Listing 2017',
@@ -79,6 +79,7 @@ var options = {
   theme: {
     mode: 'dark',
     shadeTo: 'dark',
+    palette: 'palette1'
     }
   };
 
