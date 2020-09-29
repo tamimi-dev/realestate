@@ -16,7 +16,7 @@
           chart: {
           type: 'pie',
             foreColor: '#e0e0e0',
-            background: '#fff',
+           // background: '#fff',
         },
         labels: labels,
         title: {
