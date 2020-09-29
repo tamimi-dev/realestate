@@ -20,7 +20,8 @@
         responsive: [{
           options: {
             chart: {
-                     background: '#fff'
+                     background: '#fff',
+                     height: 300
             },
             legend: {
               position: 'bottom'
