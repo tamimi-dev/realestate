@@ -80,7 +80,7 @@ var options = {
     borderColor: '#636363',
   },
   theme: {
-   // mode: 'dark',
+    mode: 'dark',
     shadeTo: 'dark',
     palette: 'palette1'
     }
