@@ -50,7 +50,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
                 }
               ],
             chart: {
-            height: 350,
+           // height: 350,
             type: 'radar',
             dropShadow: {
               enabled: true,
