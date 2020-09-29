@@ -68,7 +68,7 @@ function fetchCheckStatus(response) {
     new FusionCharts({
       type: "timeseries",
       renderAt: "chart-container",
-      id: "variable-height-demo-chart",
+      id: "avg_sale_all",
       width: "100%",
       height: "100%",
       dataSource: {
