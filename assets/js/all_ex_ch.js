@@ -1,85 +1,56 @@
-$.getJSON("https://spreadsheets.google.com/feeds/list/12Lyd3k0PRpe-Ie_LaeJaEPm3FwF3iz1gizAOSprn7l0/ok01ra6/public/values?alt=json", data => {
+$.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/2/public/values?alt=json", data => {
   var labels = [];
-  var china = [];
-   var skorea = [];
-     var italy = [];
-   var japan = [];
-     var us = [];
-   var france = [];
-     var canada = [];
-   var spain = [];
-     var iran = [];
-   var germany = [];
-    var switz = [];
- var uk = [];
-  data.feed.entry.forEach(e => {
-    labels.push(e['gsx$timecase']['$t']);
-    china.push(Number(e['gsx$china']['$t']));
-	skorea.push(Number(e['gsx$korea']['$t']));
-     italy.push(Number(e['gsx$italy']['$t']));
-	japan.push(Number(e['gsx$japan']['$t']));
-  	us.push(Number(e['gsx$us']['$t']));
-    	france.push(Number(e['gsx$france']['$t']));
-      	canada.push(Number(e['gsx$canada']['$t']));
-        	spain.push(Number(e['gsx$spain']['$t']));
-          	iran.push(Number(e['gsx$iran']['$t']));
-            	germany.push(Number(e['gsx$germany']['$t']));
-              	switz.push(Number(e['gsx$switzerland']['$t']));
-	  uk.push(Number(e['gsx$uk']['$t']));
+  var soldcount17 = [];
+   var soldcount18 = [];
+     var soldcount19 = [];
+   var soldcount20 = [];
 
+
+
+
+  data.feed.entry.forEach(e => {
+    labels.push(e['gsx$date17']['$t']);
+
+    soldcount17.push(Number(e['gsx$soldcountsalldrhm17']['$t']));
+//	al17.push(Number(e['gsx$al17']['$t']));
+  //   nl17.push(Number(e['gsx$nl17']['$t']));
+
+     soldcount18.push(Number(e['gsx$soldcountsalldrhm18']['$t']));
+    // al18.push(Number(e['gsx$al18']['$t']));
+      //  nl18.push(Number(e['gsx$nl18']['$t']));
+
+        soldcount19.push(Number(e['gsx$soldcountsalldrhm19']['$t']));
+      //  al19.push(Number(e['gsx$al19']['$t']));
+        //   nl19.push(Number(e['gsx$nl19']['$t']));
+
+           soldcount20.push(Number(e['gsx$soldcountsalldrhm20']['$t']));
+         //  al20.push(Number(e['gsx$al20']['$t']));
+            //  nl20.push(Number(e['gsx$nl20']['$t']));
   });
      
     
         var options = {
           series: [
           {
-            name: "S. Korea",
-            data: skorea
+            name: "Number of Sales 2017",
+            data: soldcount17
           },
           {
-            name: 'Italy',
-            data: italy
+            name: 'Number of Sales 2018',
+            data: soldcount18
           },
           {
-            name: "Japan",
-            data: japan
+            name: "Number of Sales 2019",
+            data: soldcount19
           },
           {
-            name: "United States",
-            data: us
-          },
-          {
-            name: "France",
-            data: france
-          },
-          {
-            name: "Canada",
-            data: canada
-          },
-          {
-            name: "Spain",
-            data: spain
-          },
-          {
-            name: "Iran",
-            data: iran
-          },
-          {
-            name: "Germany",
-            data: germany
-          },
-          {
-            name: "Switzerland",
-            data: switz
-          },
-          {
-            name: "UK",
-            data: uk
+            name: "Number of Sales 2020",
+            data: soldcount20
           }
         ],
           colors: ['#ffc107', '#d67f29', '#fd304c', '#00a700', '#c107ff', '#4B3AC5', '#3AC5C4', '#00C9A7', '#C34A36', '#FEFEDF', '#f502f1'],
           chart: {
-          height: 500,
+          height: 300,
           type: 'line',
           foreColor: "#ccc",
           zoom: {
@@ -96,7 +67,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/12Lyd3k0PRpe-Ie_LaeJaEPm3F
        //   dashArray: [0, 8, 5]
         },
         title: {
-          text: 'Cases by day (Exclude China)',
+          text: 'Number of Sales',
           align: 'left'
         },
         legend: {
