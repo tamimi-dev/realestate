@@ -26,15 +26,15 @@ function fetchCheckStatus(response) {
           return resp.text();
         }
       })
-      .then(function(data) {
-        return data;
+      .then(function(data1) {
+        return data1;
       })
       .catch(function(err) {
         console.log("Something went wrong! Please check data/schema files");
       });
   }
   
-    var schema = [{
+    var schema1 = [{
       "name": "Time",
       "type": "date",
       "format": "%-d/%-m/%Y" // NEW fixed format
@@ -47,7 +47,7 @@ function fetchCheckStatus(response) {
     }];
   
   
-  var data, dataStore;
+  var data1, dataStore1;
   
   
   function formatJSON(entries) {
@@ -61,11 +61,11 @@ function fetchCheckStatus(response) {
       "https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/1/public/values?alt=json"
     )
   ]).then(function(res) {
-    data = formatJSON(res[0].feed.entry); // NEW added function to format incoming JSON
+    data1 = formatJSON(res[0].feed.entry); // NEW added function to format incoming JSON
   
-    dataStore = new FusionCharts.DataStore(data, schema);
+    dataStore1 = new FusionCharts1.DataStore1(data1, schema1);
   
-    new FusionCharts({
+    new FusionCharts1({
       type: "timeseries",
       renderAt: "chart-container_dom",
       id: "DOM_all",
@@ -105,7 +105,7 @@ function fetchCheckStatus(response) {
               }
           }
         ],
-        data: dataStore.getDataTable()
+        data: dataStore1.getDataTable()
       }
     }).render();
   });
