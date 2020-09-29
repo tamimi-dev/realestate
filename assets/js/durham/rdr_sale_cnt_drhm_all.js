@@ -76,19 +76,25 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
           grid: {
             borderColor: '#636363',
           },
-          tooltip: {
-            theme: "dark"
-           },
+
           markers: {
             size: 2,
-            hover: {
-                size: 5
+            colors: ['#d67f29'],
+            hover: { size: 5 },
           },
           theme: {
             mode: 'dark'
           },
           xaxis: {
             categories: labels,
+          },
+          tooltip: {
+            theme: "dark",
+            y: {
+              formatter: function(val) {
+                return val
+              }
+            }
           }
           };
   
