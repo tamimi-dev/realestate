@@ -18,10 +18,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
 
 
 var options = {
-    chart: {
-        
-        background: '#303032',
-    },
+
     series: [{
     name: 'Active Listing 2017',
     data: al17
@@ -37,7 +34,8 @@ var options = {
   }],
     chart: {
     type: 'bar',
-    height: 500
+   // height: 500,
+      background: '#303032',
   },
   title: {
     text: 'Active Listings',
