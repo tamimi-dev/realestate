@@ -19,8 +19,8 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
 
 var options = {
     chart: {
-        foreColor: "#f2f2f2",
-        background: '#303032'
+        
+        background: '#303032',
     },
     series: [{
     name: 'Active Listing 2017',
