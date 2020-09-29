@@ -82,9 +82,9 @@ var options = {
     borderColor: '#636363',
   },
   theme: {
-   // mode: 'dark',
-    shadeTo: 'dark',
-    palette: 'palette1'
+    mode: 'dark',
+   // shadeTo: 'dark',
+    //palette: 'palette1'
     }
   };
 
