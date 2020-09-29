@@ -70,9 +70,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
           stroke: {
             width: 2
           },
-          fill: {
-            opacity: 0.1
-          },
+
           grid: {
             borderColor: '#636363',
           },
