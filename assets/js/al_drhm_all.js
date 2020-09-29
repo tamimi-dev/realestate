@@ -64,7 +64,7 @@ var options = {
   fill: {
     opacity: 1
   },
-  colors: ["#FF0080"],
+
   tooltip: {
     y: {
       formatter: function (val) {
@@ -72,6 +72,9 @@ var options = {
       }
     },
     theme: "dark"
+  },
+  grid: {
+    borderColor: '#636363',
   }
   };
 
