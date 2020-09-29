@@ -15,23 +15,19 @@
   },
           chart: {
           type: 'pie',
-            foreColor: '#e0e0e0'
+            foreColor: '#e0e0e0',
+            background: '#fff',
         },
         labels: labels,
         title: {
           text: 'Total Sales Count'
         },
-        responsive: [{
-          options: {
-            chart: {
-                     background: '#fff',
-                     
-            },
-            legend: {
+
+        legend: {
               position: 'bottom'
             }
-          }
-        }]
+
+   
         };
         var chart = new ApexCharts(document.querySelector("#pie_sale_cnt_drhm_all"), options);
         chart.render();
