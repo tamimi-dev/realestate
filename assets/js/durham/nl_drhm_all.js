@@ -18,10 +18,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
 
 
 var options = {
-    chart: {
-        foreColor: "#f2f2f2",
-        background: '#303032'
-    },
+    
     series: [{
     name: 'New Listing 2017',
     data: nl17
@@ -37,7 +34,8 @@ var options = {
   }],
     chart: {
     type: 'bar',
-    height: 500
+  //  height: 500
+    background: '#303032',
   },
   title: {
     text: 'New Listings',
