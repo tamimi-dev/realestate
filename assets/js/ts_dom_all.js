@@ -50,10 +50,10 @@ function fetchCheckStatus(response) {
   var data_dom, dataStore_dom;
   
   
-  function formatJSON(entries) {
-      var formattedJSON = [];
-    entries.forEach(item => formattedJSON.push([item.gsx$date.$t, parseFloat(item.gsx$avgdomalldrhm.$t), parseFloat(item.gsx$avgdomallosh.$t)]));
-    return formattedJSON; // NEW return values
+  function formatJSON_dom(entries) {
+      var formattedJSON_dom = [];
+    entries.forEach(item => formattedJSON_dom.push([item.gsx$date.$t, parseFloat(item.gsx$avgdomalldrhm.$t), parseFloat(item.gsx$avgdomallosh.$t)]));
+    return formattedJSON_dom; // NEW return values
   };
   
   Promise.all([
@@ -61,7 +61,7 @@ function fetchCheckStatus(response) {
       "https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/1/public/values?alt=json"
     )
   ]).then(function(res) {
-    data_dom = formatJSON(res[0].feed.entry); // NEW added function to format incoming JSON
+    data_dom = formatJSON_dom(res[0].feed.entry); // NEW added function to format incoming JSON
   
     dataStore_dom = new FusionCharts.DataStore(data_dom, schema_dom);
   
