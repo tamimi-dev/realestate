@@ -80,7 +80,9 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
             theme: "dark"
            },
           markers: {
-            size: 0
+            size: 2,
+            hover: {
+                size: 5
           },
           theme: {
             mode: 'dark'
