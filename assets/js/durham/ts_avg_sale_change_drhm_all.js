@@ -26,86 +26,83 @@ function fetchCheckStatus(response) {
           return resp.text();
         }
       })
-      .then(function(data_dom) {
-        return data_dom;
+      .then(function(data) {
+        return data;
       })
       .catch(function(err) {
         console.log("Something went wrong! Please check data/schema files");
       });
   }
   
-    var schema_dom = [{
+    var schema = [{
       "name": "Time",
       "type": "date",
       "format": "%-d/%-m/%Y" // NEW fixed format
     }, {
-      "name": "DOM Durham",
+      "name": "Change in Avg Sale Prices",
       "type": "number"
     }, {
-      "name": "DOM Oshawa",
+      "name": "Avg Sale Prices",
       "type": "number"
     }];
   
   
-  var data_dom, dataStore_dom;
+  var data, dataStore;
   
   
-  function formatJSON_dom(entries) {
-      var formattedJSON_dom = [];
-    entries.forEach(item => formattedJSON_dom.push([item.gsx$date.$t, parseFloat(item.gsx$avgdomalldrhm.$t), parseFloat(item.gsx$avgdomallosh.$t)]));
-    return formattedJSON_dom; // NEW return values
+  function formatJSON(entries) {
+      var formattedJSON = [];
+    entries.forEach(item => formattedJSON.push([item.gsx$date.$t, parseFloat(item.gsx$changeavgsalepricesalldrhm.$t), parseFloat(item.gsx$avgsalepricesalldrhm.$t)]));
+    return formattedJSON; // NEW return values
   };
   
   Promise.all([
     loadData(
-      "https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/1/public/values?alt=json"
+      "https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/om4gaa5/public/values?alt=json"
     )
   ]).then(function(res) {
-    data_dom = formatJSON_dom(res[0].feed.entry); // NEW added function to format incoming JSON
+    data = formatJSON(res[0].feed.entry); // NEW added function to format incoming JSON
   
-    dataStore_dom = new FusionCharts.DataStore(data_dom, schema_dom);
+    dataStore = new FusionCharts.DataStore(data, schema);
   
     new FusionCharts({
       type: "timeseries",
-      renderAt: "chart-container_dom",
-      id: "DOM_all",
+      renderAt: "chart-container",
+      id: "avg_sale_all",
       width: "100%",
       height: "100%",
       dataSource: {
         chart: {
           multiCanvas: true,
-          canvasHeightProportion: "1:1",
+          canvasHeightProportion: "2:1",
           "theme": "candy",
         },
         caption: {
-          text: "Days on Market"
+          text: "Average Sales Price"
         },
         subcaption: {
-          text: "The average days on market on Durham and Oshawa"
+          text: "The average of  the sales price and the changes"
         },
         yAxis: [
           {
             plot: {
               value: "Avg Sale Prices",
-              type: "line"
+              type: "area"
             },
-            title: "DOM Durham",
+            title: "Avg Sale Prices",
             format: {
-              prefix: "days"
+              prefix: "$"
             }
           },
           {
             plot: {
               value: "Change in Avg Sale Prices",
-              type: "line"
+              type: "column"
             },
-            title: "DOM Oshawa",
-            format: {
-                prefix: "days"
-              }
+            title: "+/- Avg Sale Prices"
           }
         ],
-        data: dataStore_dom.getDataTable()
+        data: dataStore.getDataTable()
       }
     }).render();
   });

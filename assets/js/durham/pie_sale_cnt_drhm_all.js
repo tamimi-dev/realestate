@@ -1,4 +1,4 @@
- $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/4/public/values?alt=json", data => {
+ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/omp9zhn/public/values?alt=json", data => {
   var labels = [];
    var seri = [];
   data.feed.entry.forEach(e => {

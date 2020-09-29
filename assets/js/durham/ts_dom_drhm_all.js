@@ -26,49 +26,49 @@ function fetchCheckStatus(response) {
           return resp.text();
         }
       })
-      .then(function(data_moi_all) {
-        return data_moi_all;
+      .then(function(data_dom) {
+        return data_dom;
       })
       .catch(function(err) {
         console.log("Something went wrong! Please check data/schema files");
       });
   }
   
-    var schema_moi_all = [{
+    var schema_dom = [{
       "name": "Time",
       "type": "date",
       "format": "%-d/%-m/%Y" // NEW fixed format
     }, {
-      "name": "Months of Inventory Durham",
+      "name": "DOM Durham",
       "type": "number"
     }, {
-      "name": "Months of Inventory Oshawa",
+      "name": "DOM Oshawa",
       "type": "number"
     }];
   
   
-  var data_moi_all, dataStore_moi_all;
+  var data_dom, dataStore_dom;
   
   
-  function formatJSON_moi_all(entries) {
-      var formattedJSON_moi_all = [];
-    entries.forEach(item => formattedJSON_moi_all.push([item.gsx$date.$t, parseFloat(item.gsx$monthsofinventoryalldrhm.$t), parseFloat(item.gsx$monthsofinventoryallosh.$t)]));
-    return formattedJSON_moi_all; // NEW return values
+  function formatJSON_dom(entries) {
+      var formattedJSON_dom = [];
+    entries.forEach(item => formattedJSON_dom.push([item.gsx$date.$t, parseFloat(item.gsx$avgdomalldrhm.$t), parseFloat(item.gsx$avgdomallosh.$t)]));
+    return formattedJSON_dom; // NEW return values
   };
   
   Promise.all([
     loadData(
-      "https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/1/public/values?alt=json"
+      "https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/om4gaa5/public/values?alt=json"
     )
   ]).then(function(res) {
-    data_moi_all = formatJSON_moi_all(res[0].feed.entry); // NEW added function to format incoming JSON
+    data_dom = formatJSON_dom(res[0].feed.entry); // NEW added function to format incoming JSON
   
-    dataStore_moi_all = new FusionCharts.DataStore(data_moi_all, schema_moi_all);
+    dataStore_dom = new FusionCharts.DataStore(data_dom, schema_dom);
   
     new FusionCharts({
       type: "timeseries",
-      renderAt: "chart-container_moi_all",
-      id: "moi_all",
+      renderAt: "chart-container_dom",
+      id: "DOM_all",
       width: "100%",
       height: "100%",
       dataSource: {
@@ -78,34 +78,34 @@ function fetchCheckStatus(response) {
           "theme": "candy",
         },
         caption: {
-          text: "Months of Inventory"
+          text: "Days on Market"
         },
         subcaption: {
-          text: "Months of Inventory on Durham and Oshawa"
+          text: "The average days on market on Durham and Oshawa"
         },
         yAxis: [
           {
             plot: {
-              value: "Months of Inventory",
+              value: "Avg Sale Prices",
               type: "line"
             },
-            title: "Months of Inventory Durham",
+            title: "DOM Durham",
             format: {
-              prefix: "Months"
+              prefix: "days"
             }
           },
           {
             plot: {
-              value: "Months of Inventory",
+              value: "Change in Avg Sale Prices",
               type: "line"
             },
-            title: "Months of Inventory Oshawa",
+            title: "DOM Oshawa",
             format: {
-                prefix: "Months"
+                prefix: "days"
               }
           }
         ],
-        data: dataStore_moi_all.getDataTable()
+        data: dataStore_dom.getDataTable()
       }
     }).render();
   });

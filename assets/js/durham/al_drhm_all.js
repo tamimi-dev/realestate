@@ -1,15 +1,15 @@
-$.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/2/public/values?alt=json", data => {
+$.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/ob1idvq/public/values?alt=json", data => {
     var labels = [];
-    var nl17 = [];
-     var nl18 = [];
-     var nl19 = [];
-     var nl20 = [];
+    var al17 = [];
+     var al18 = [];
+     var al19 = [];
+     var al20 = [];
     data.feed.entry.forEach(e => {
       labels.push(e['gsx$label']['$t']);
-      nl17.push(Number(e['gsx$nl17']['$t']));
-      nl18.push(Number(e['gsx$nl18']['$t']));
-      nl19.push(Number(e['gsx$nl19']['$t']));
-      nl20.push(Number(e['gsx$nl20']['$t']));
+      al17.push(Number(e['gsx$al17']['$t']));
+      al18.push(Number(e['gsx$al18']['$t']));
+      al19.push(Number(e['gsx$al19']['$t']));
+      al20.push(Number(e['gsx$al20']['$t']));
     }); 
 
 
@@ -23,24 +23,24 @@ var options = {
         background: '#303032'
     },
     series: [{
-    name: 'New Listing 2017',
-    data: nl17
+    name: 'Active Listing 2017',
+    data: al17
   }, {
-    name: 'New Listing 2018',
-    data: nl18
+    name: 'Active Listing 2018',
+    data: al18
   }, {
-    name: 'New Listing 2019',
-    data: nl19
+    name: 'Active Listing 2019',
+    data: al19
   }, {
-    name: 'New Listing 2020',
-    data: nl20
+    name: 'Active Listing 2020',
+    data: al20
   }],
     chart: {
     type: 'bar',
     height: 500
   },
   title: {
-    text: 'New Listings',
+    text: 'Active Listings',
     align: 'left'
   },
   plotOptions: {
@@ -63,7 +63,7 @@ var options = {
   },
   yaxis: {
     title: {
-      text: 'New Listings (Units)'
+      text: 'Active Listings (Units)'
     }
   },
   fill: {
@@ -88,7 +88,7 @@ var options = {
     }
   };
 
-  var chart = new ApexCharts(document.querySelector("#nl_drhm_all"), options);
+  var chart = new ApexCharts(document.querySelector("#al_drhm_all"), options);
   chart.render();
 
 });
