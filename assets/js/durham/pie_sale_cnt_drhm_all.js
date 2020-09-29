@@ -9,7 +9,8 @@
          series: seri,
                 plotOptions: {
      pie: {
-                    expandOnClick: true
+                    expandOnClick: true,
+                    customScale: 0.5
      }
   },
           chart: {
@@ -21,7 +22,7 @@
           options: {
             chart: {
                      background: '#fff',
-                     height: 300
+                     
             },
             legend: {
               position: 'bottom'
