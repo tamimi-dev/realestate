@@ -81,8 +81,8 @@ var options = {
   },
   theme: {
     mode: 'dark',
-   // shadeTo: 'dark',
-    //palette: 'palette1'
+    shadeTo: 'dark',
+    palette: 'palette1'
     }
   };
 
