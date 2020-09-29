@@ -9,8 +9,8 @@
          series: seri,
                 plotOptions: {
      pie: {
-                    expandOnClick: true,
-                    customScale: 0.5
+                    expandOnClick: true
+                   // customScale: 0.5
      }
   },
           chart: {
