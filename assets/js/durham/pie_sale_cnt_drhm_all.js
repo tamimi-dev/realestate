@@ -18,6 +18,9 @@
             foreColor: '#e0e0e0'
         },
         labels: labels,
+        title: {
+          text: 'Total Sales Count'
+        },
         responsive: [{
           options: {
             chart: {
