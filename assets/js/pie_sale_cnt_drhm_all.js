@@ -1,9 +1,9 @@
- $.getJSON("https://spreadsheets.google.com/feeds/list/12Lyd3k0PRpe-Ie_LaeJaEPm3FwF3iz1gizAOSprn7l0/o6kvzv3/public/values?alt=json", data => {
+ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/2/public/values?alt=json", data => {
   var labels = [];
    var seri = [];
   data.feed.entry.forEach(e => {
-    labels.push(e['gsx$pie10label']['$t']);
-    seri.push(Number(e['gsx$pie10cse']['$t']));
+    labels.push(e['gsx$piesalecntdrhmalllabels']['$t']);
+    seri.push(Number(e['gsx$piesalecntdrhmallvalues']['$t']));
   });
       var options = {
          series: seri,
@@ -28,7 +28,7 @@
           }
         }]
         };
-        var chart = new ApexCharts(document.querySelector("#chart10c"), options);
+        var chart = new ApexCharts(document.querySelector("#pie_sale_cnt_drhm_all"), options);
         chart.render();
     });  
  
