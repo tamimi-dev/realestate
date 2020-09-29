@@ -64,7 +64,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
             text: 'Sales Count per Year'
           },
           fill: {
-            opacity: 0.4,
+            opacity: 0.8,
 
           },
           stroke: {
