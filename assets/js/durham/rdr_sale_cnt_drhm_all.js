@@ -52,6 +52,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
             chart: {
            // height: 350,
             type: 'radar',
+            background: '#303032',
             dropShadow: {
               enabled: true,
               blur: 1,
