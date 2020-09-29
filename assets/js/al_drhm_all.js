@@ -18,6 +18,9 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
 
 
 var options = {
+    chart: {
+        foreColor: "#ccc"
+    },
     series: [{
     name: 'Active Listing 2017',
     data: al17
@@ -55,7 +58,7 @@ var options = {
   },
   yaxis: {
     title: {
-      text: 'Units'
+      text: 'Active Listings (Units)'
     }
   },
   fill: {
