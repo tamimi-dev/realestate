@@ -63,7 +63,7 @@ function fetchCheckStatus(response) {
   ]).then(function(res) {
     data1 = formatJSON(res[0].feed.entry); // NEW added function to format incoming JSON
   
-    dataStore1 = new FusionCharts.DataStore1(data1, schema1);
+    dataStore1 = new FusionCharts.DataStore(data1, schema1);
   
     new FusionCharts({
       type: "timeseries",
