@@ -50,7 +50,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
         ],
           colors: ['#ffc107', '#d67f29', '#fd304c', '#00a700', '#c107ff', '#4B3AC5', '#3AC5C4', '#00C9A7', '#C34A36', '#FEFEDF', '#f502f1'],
           chart: {
-          height: 300,
+          height: 500,
           type: 'line',
           foreColor: "#ccc",
           zoom: {
