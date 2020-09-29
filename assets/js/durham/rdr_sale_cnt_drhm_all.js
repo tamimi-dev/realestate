@@ -81,6 +81,9 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
           markers: {
             size: 0
           },
+          theme: {
+            mode: 'dark'
+          },
           xaxis: {
             categories: labels,
           }
