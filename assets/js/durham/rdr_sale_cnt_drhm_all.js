@@ -82,7 +82,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
           }
           };
   
-          var chart = new ApexCharts(document.querySelector("#chart"), options);
+          var chart = new ApexCharts(document.querySelector("#rdr_sale_cnt_drhm_all"), options);
           chart.render();
         
         }); 
