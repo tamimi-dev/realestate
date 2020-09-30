@@ -107,7 +107,22 @@ function fetchCheckStatus(response) {
               }
             }
           },
+          timemarker: [
+            {
+              start: "Oct-2020",
+              label: "Based on a predective model: ŷ = 85.4003X-3122963.63646 {br} (SSX=420879355.1818, SP=35943221441.2386, SP/SSX=85.4003, MY-bMX= -3122963.63646)",
+              timeformat: "%b-%Y",
+              style: {
+                marker: {
+                  fill: "#FBEFCC"
+                }
+              }
+            }
+        ],
         data: dataStore_pred_all.getDataTable()
       }
     }).render();
   });
+
+
+ 
