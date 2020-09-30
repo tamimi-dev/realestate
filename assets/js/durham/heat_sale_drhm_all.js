@@ -108,11 +108,15 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
           }
           ],
             chart: {
-          height: 350,
+          height: 550,
             type: 'heatmap',
+         //   background: '#303032'
           },
           dataLabels: {
             enabled: false
+          },
+          theme: {
+            mode: 'dark'
           },
           colors: ["#de00fb"],
           title: {
@@ -122,6 +126,14 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
             type: 'category',
             categories: labels
           },
+          tooltip: {
+            theme: "dark",
+            y: {
+              formatter: function(val) {
+                return val
+              }
+            }
+          }
           };
   
           var chart = new ApexCharts(document.querySelector("#heat_sale_drhm_all"), options);
