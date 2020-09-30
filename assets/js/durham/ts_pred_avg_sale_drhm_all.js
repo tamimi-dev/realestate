@@ -89,7 +89,7 @@ function fetchCheckStatus(response) {
           text: "Predicted Average Sale Price"
         },
         subcaption: {
-          text: "The average of the sales price and the future Prediction (represented in dashed)"
+          text: "The average of the sales price and the future Prediction (represented in dashed), Model Equation: ŷ = 85.4003X-3122963.63646 (SSX=420879355.1818, SP=35943221441.2386, SP/SSX=85.4003, MY-bMX= -3122963.63646)"
         },
         yAxis: [
           {
