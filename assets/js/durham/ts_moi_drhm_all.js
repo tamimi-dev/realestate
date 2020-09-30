@@ -71,26 +71,27 @@ function fetchCheckStatus(response) {
       id: "moi_all",
       width: "100%",
       height: "100%",
-      chart: {
-        paletteColors: "#36B5D8, #F066AC, #6EC85A, #6E80CA, #E09653, #F0DC46, #E1D7AD, #61C8C8, #EBE4F4, #E64141",
-        style: {
 
-          background: {
-              fill: "#303032"
-          },
-          canvas: {
-              fill: "#353438",
-              stroke: "#4B4B4B",
-              "stroke-width": .5
-          }
-      }
-
-      },
       dataSource: {
         chart: {
           multiCanvas: false,
           canvasHeightProportion: "1:1",
           "theme": "candy",
+
+          paletteColors: "#36B5D8, #F066AC, #6EC85A, #6E80CA, #E09653, #F0DC46, #E1D7AD, #61C8C8, #EBE4F4, #E64141",
+          style: {
+  
+            background: {
+                fill: "#303032"
+            },
+            canvas: {
+                fill: "#353438",
+                stroke: "#4B4B4B",
+                "stroke-width": .5
+            }
+        }
+
+
         },
         caption: {
           text: "Months of Inventory"
