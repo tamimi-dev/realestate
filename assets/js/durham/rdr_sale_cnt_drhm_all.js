@@ -63,10 +63,11 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
           title: {
             text: 'Sales Count per Year'
           },
+          colors: ['#ffc107', '#d67f29', '#fd304c', '#00a700'],
+
           fill: {
             opacity: 0.25,
-            colors: ['#ffc107', '#d67f29', '#fd304c', '#00a700'],
-
+           
           },
           stroke: {
             width: 2
