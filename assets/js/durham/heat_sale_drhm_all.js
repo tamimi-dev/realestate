@@ -108,9 +108,9 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
           }
           ],
             chart: {
-          height: 550,
+          height: 500,
             type: 'heatmap',
-         //   background: '#303032'
+           background: '#303032'
           },
           dataLabels: {
             enabled: false
