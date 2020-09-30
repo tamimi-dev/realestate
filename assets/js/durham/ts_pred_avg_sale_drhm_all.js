@@ -58,7 +58,7 @@ function fetchCheckStatus(response) {
       "https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/okydvfm/public/values?alt=json"
     )
   ]).then(function(res) {
-    data = formatJSON_pred_all(res[0].feed.entry); // NEW added function to format incoming JSON
+    data_pred_all = formatJSON_pred_all(res[0].feed.entry); // NEW added function to format incoming JSON
   
     dataStore_pred_all = new FusionCharts.DataStore(data_pred_all, schema_pred_all);
   
