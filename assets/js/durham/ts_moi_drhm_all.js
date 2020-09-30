@@ -73,7 +73,7 @@ function fetchCheckStatus(response) {
       height: "100%",
       dataSource: {
         chart: {
-          multiCanvas: true,
+          multiCanvas: false,
           canvasHeightProportion: "1:1",
           "theme": "candy",
         },
