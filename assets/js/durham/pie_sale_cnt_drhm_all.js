@@ -22,6 +22,7 @@
         title: {
           text: 'Total Sales Count'
         },
+        colors: ['#ffc107', '#d67f29', '#fd304c', '#00a700'],
 
         legend: {
               position: 'bottom'
