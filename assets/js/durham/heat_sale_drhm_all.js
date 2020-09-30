@@ -120,7 +120,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
           },
           colors: ["#de00fb"],
           title: {
-            text: 'HeatMap Chart For The Average Sale Since 2006'
+            text: 'HeatMap Chart For The Average Sale Since 2006 (Darker colors represents cheaper sale value)'
           },
           xaxis: {
             type: 'category',
