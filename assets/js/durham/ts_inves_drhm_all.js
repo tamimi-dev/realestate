@@ -101,6 +101,7 @@ function fetchCheckStatus(response) {
         },
         yAxis: [
           {
+            plot: ["Percent of Investors Durham", "Percent of Investors Oshawa"],
             plottype: "column",
             title: "Percent of Investors ",
             format: {
