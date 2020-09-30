@@ -78,7 +78,7 @@ function fetchCheckStatus(response) {
           canvasHeightProportion: "1:1",
           "theme": "candy",
 
-          paletteColors: "#F0DC46, #E1D7AD, #6EC85A, #6E80CA, #E09653, #36B5D8, #F066AC, #61C8C8, #EBE4F4, #E64141",
+          paletteColors: "#F0DC46, #E64141, #6EC85A, #6E80CA, #E09653, #36B5D8, #F066AC, #61C8C8, #EBE4F4, #E1D7AD",
           style: {
   
             background: {
