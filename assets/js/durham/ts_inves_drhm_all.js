@@ -103,7 +103,7 @@ function fetchCheckStatus(response) {
           {
             plot: {
               value: "Percent of Investors",
-              type: "bar"
+              type: "column"
             },
             title: "Percent of Investors ",
             format: {
