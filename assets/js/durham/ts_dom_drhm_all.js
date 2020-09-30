@@ -76,6 +76,17 @@ function fetchCheckStatus(response) {
           multiCanvas: true,
           canvasHeightProportion: "1:1",
           "theme": "candy",
+          style: {
+  
+            background: {
+                fill: "#303032"
+            },
+            canvas: {
+                fill: "#353438",
+                stroke: "#4B4B4B",
+                "stroke-width": .5
+            }
+        }
         },
         caption: {
           text: "Days on Market"

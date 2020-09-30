@@ -76,6 +76,17 @@ function fetchCheckStatus(response) {
           multiCanvas: true,
           canvasHeightProportion: "2:1",
           "theme": "candy",
+          style: {
+            paletteColors: "#36B5D8, #6EC85A, #F066AC, #6E80CA, #E09653, #F0DC46, #E1D7AD, #61C8C8, #EBE4F4, #E64141",
+            background: {
+                fill: "#303032"
+            },
+            canvas: {
+                fill: "#353438",
+                stroke: "#4B4B4B",
+                "stroke-width": .5
+            }
+        }
         },
         caption: {
           text: "Average Sales Price"
