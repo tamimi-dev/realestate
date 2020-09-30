@@ -94,15 +94,20 @@ function fetchCheckStatus(response) {
         yAxis: [
           {
             plot: ["Percent of Investors Durham"],
-            plottype: "line",
             title: "Average Sale with prediction",
             format: {
               prefix: "$"
             }
           }
         ],
+        extensions: {
+            prediction: {
+              style: {
+                plot: "line"
+              }
+            }
+          },
         data: dataStore_pred_all.getDataTable()
       }
     }).render();
   });
-  
