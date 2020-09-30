@@ -101,10 +101,7 @@ function fetchCheckStatus(response) {
         },
         yAxis: [
           {
-            plot: {
-              value: "Percent of Investors",
-              type: "column"
-            },
+            plottype: "column",
             title: "Percent of Investors ",
             format: {
               prefix: "%"
