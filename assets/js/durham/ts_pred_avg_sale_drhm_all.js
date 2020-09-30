@@ -89,7 +89,7 @@ function fetchCheckStatus(response) {
           text: "Predicted Average Sale Price"
         },
         subcaption: {
-          text: "The average of the sales price and the future Prediction"
+          text: "The average of the sales price and the future Prediction (represented in dashed)"
         },
         yAxis: [
           {
