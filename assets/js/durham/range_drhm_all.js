@@ -48,7 +48,7 @@ var options = {
    // height: 200,
       background: '#303032',
   },
-  title: {
+/*  title: {
     text: 'Average Sale Price Distribution',
 
     floating: true,
@@ -57,11 +57,11 @@ var options = {
     style: {
       color: '#dedede'
     }
-  },
+  },*/
   plotOptions: {
     bar: {
       horizontal: false,
-      columnWidth: '80%',
+     // columnWidth: '80%',
       dataLabels: {
         position: 'top', // top, center, bottom
       },
@@ -85,7 +85,7 @@ var options = {
     colors: ['transparent']
   },
   xaxis: {
-    categories: ["200K ~ 300K", "300K ~ 400K", "400K ~ 500K", "500K ~ 600K", "600K ~ 700K", "700K ~ 800K"],
+    categories: ["200K-300K", "300K-400K", "400K-500K", "500K-600K", "600K-700K", "700K-800K"],
     position: 'top',
     axisBorder: {
       show: false
