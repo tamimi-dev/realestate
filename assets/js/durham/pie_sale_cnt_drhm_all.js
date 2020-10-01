@@ -17,6 +17,7 @@
           type: 'pie',
             foreColor: '#e0e0e0',
            // background: '#fff',
+           height: 550
         },
         labels: labels,
         title: {
