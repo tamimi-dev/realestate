@@ -82,7 +82,7 @@ var options = {
   theme: {
     mode: 'dark',
     shadeTo: 'dark',
-    palette: 'palette8'
+    palette: 'palette6'
     }
   };
 
