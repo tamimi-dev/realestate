@@ -15,11 +15,11 @@ axis.min = 0;
 axis.max = 12;
 axis.strictMinMax = true;
 
-axis.renderer.line.strokeWidth = 8;
+axis.renderer.line.strokeWidth = 4;
 axis.renderer.line.strokeOpacity = 1;
 axis.renderer.minLabelPosition = 0.05; // hides 0 label
 axis.renderer.inside = true;
-axis.renderer.labels.template.radius = 28;
+axis.renderer.labels.template.radius = -20;
 axis.renderer.axisFills.template.disabled = true;
 axis.renderer.grid.template.disabled = true;
 axis.renderer.ticks.template.disabled = false;
@@ -63,7 +63,7 @@ axisFill.fill = new am4core.InterfaceColorSet().getFor("fill");
 
 var label = chart.radarContainer.createChild(am4core.Label);
 label.isMeasured = false;
-label.fontSize = 10;
+label.fontSize = 11;
 label.horizontalCenter = "middle";
 label.verticalCenter = "middle";
 
@@ -76,7 +76,7 @@ var hourHand = chart.hands.push(new am4charts.ClockHand());
 hourHand.radius = am4core.percent(85);
 hourHand.innerRadius = am4core.percent(30);
 hourHand.startWidth = 5;
-hourHand.endWidth = 1;
+hourHand.endWidth = 5;
 hourHand.rotationDirection = "clockWise";
 hourHand.pin.disabled = true;
 hourHand.zIndex = 0;
@@ -86,7 +86,7 @@ minutesHand.radius = am4core.percent(100);
 minutesHand.innerRadius = am4core.percent(30);
 minutesHand.rotationDirection = "clockWise";
 minutesHand.startWidth = 3;
-minutesHand.endWidth = 1;
+minutesHand.endWidth = 3;
 minutesHand.pin.disabled = true;
 minutesHand.zIndex = 1;
 
