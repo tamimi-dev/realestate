@@ -53,7 +53,7 @@ var options = {
 
     floating: true,
     offsetY: 330,
-    align: 'center',
+    align: 'bottom',
     style: {
       color: '#dedede'
     }
@@ -71,7 +71,7 @@ var options = {
     enabled: true,
 
     formatter: function (val) {
-        return val + "CAD$";
+        return val + " Items";
       },
       offsetY: -20,
       style: {
@@ -99,7 +99,7 @@ var options = {
         gradient: {
           colorFrom: '#D8E3F0',
           colorTo: '#BED1E6',
-          stops: [0, 100],
+        //  stops: [0, 100],
           opacityFrom: 0.4,
           opacityTo: 0.5,
         }
@@ -107,12 +107,15 @@ var options = {
     },
     tooltip: {
       enabled: true,
+      formatter: function (val) {
+        return " " + val + " Items"
+      }
     }
 
   },
   yaxis: {
     title: {
-      text: 'Sale Counts',
+      text: 'Items',
 
       axisBorder: {
         show: false
@@ -122,9 +125,7 @@ var options = {
       },
       labels: {
         show: false,
-        formatter: function (val) {
-          return val + "%";
-        }
+
       }
 
     }
@@ -133,14 +134,14 @@ var options = {
     opacity: 1
   },
 
-  tooltip: {
+ /* tooltip: {
     y: {
       formatter: function (val) {
-        return " " + val + " CAD$"
+        return " " + val + " Items"
       }
     },
     theme: "dark"
-  },
+  },*/
   grid: {
     borderColor: '#636363',
   },
