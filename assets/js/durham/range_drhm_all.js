@@ -1,5 +1,5 @@
 $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9SgdkrAsxgA_YsMYsker9c/ooebdkx/public/values?alt=json", data => {
-   // var labels = [];
+  
     var range_200_300 = [];
      var range_300_400 = [];
      var range_400_500 = [];
@@ -7,7 +7,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
      var range_600_700 = [];
      var range_700_800 = [];
     data.feed.entry.forEach(e => {
-     // labels.push(e['gsx$label']['$t']);
+
       range_200_300.push(Number(e['rng200300drhmall']['$t']));
       range_300_400.push(Number(e['rng300400drhmall']['$t']));
       range_400_500.push(Number(e['rng400500drhmall']['$t']));
