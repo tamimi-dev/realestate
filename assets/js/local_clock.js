@@ -5,7 +5,7 @@ am4core.useTheme(am4themes_animated);
 
 // create chart
 var chart = am4core.create("amchart_clock", am4charts.GaugeChart);
-chart.exporting.menu = new am4core.ExportMenu();
+//chart.exporting.menu = new am4core.ExportMenu();
 
 chart.startAngle = -90;
 chart.endAngle = 270;
