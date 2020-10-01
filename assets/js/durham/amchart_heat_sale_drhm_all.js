@@ -1,7 +1,7 @@
 
  async function fetchDatac(url) {
     const jsonDatac = await fetch(url).then(r => r.json());
-    const datac = jsonDatac.feed.entry.map(e => ([
+    const datac = jsonDatac.feed.entry.map(e => (
       {
           "year": 'Average Sale 2006',
           "month": e.gsx$label.$t,
@@ -65,7 +65,7 @@
   }
   
   
-    ]));
+    ));
     
     handleData(datac);
   }
