@@ -34,7 +34,7 @@ var options = {
   }],
     chart: {
     type: 'bar',
-   // height: 500,
+    height: 200,
       background: '#303032',
   },
   title: {

@@ -3,8 +3,8 @@ FusionCharts.ready(function() {
         type: 'hlineargauge',
         renderAt: 'chart-container_score',
         id: 'market_score',
-       width: '270',
-        height: '490',
+       width: '300',
+        height: '190',
         dataFormat: 'json',
         dataSource: {
           "chart": {
