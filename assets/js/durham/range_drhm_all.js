@@ -93,7 +93,7 @@ var options = {
     axisTicks: {
       show: false
     },
-    crosshairs: {
+   /* crosshairs: {
       fill: {
         type: 'gradient',
         gradient: {
@@ -111,7 +111,7 @@ var options = {
         return " " + val + " Items"
       }
     }
-
+*/
   },
   yaxis: {
     title: {
