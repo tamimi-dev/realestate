@@ -175,7 +175,7 @@ am4core.ready(function() {
     // category axis
     var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
     categoryAxis.renderer.grid.template.location = 0;
-    categoryAxis.dataFields.category = "country";
+    categoryAxis.dataFields.category = "region";
     
     var categoryAxisRenderer = categoryAxis.renderer;
     var categoryAxisLabel = categoryAxisRenderer.labels.template;
@@ -218,7 +218,7 @@ am4core.ready(function() {
     series.columns.template.width = am4core.percent(90);
     series.columns.template.strokeOpacity = 0;
     series.dataFields.valueY = "value" + currentYear;
-    series.dataFields.categoryX = "country";
+    series.dataFields.categoryX = "region";
     series.tooltipText = "{categoryX}:{valueY.value}";
     
     // this makes columns to be of a different color, depending on value
@@ -260,11 +260,11 @@ am4core.ready(function() {
         for (var continent in temperatures) {
             var continentData = temperatures[continent];
     
-            continentData.forEach(function (country) {
-                var rawDataItem = { "country": country[0] }
+            continentData.forEach(function (region) {
+                var rawDataItem = { "region": region[0] }
     
-                for (var y = 2; y < country.length; y++) {
-                    rawDataItem["value" + (startYear + y - 2)] = country[y];
+                for (var y = 2; y < region.length; y++) {
+                    rawDataItem["value" + (startYear + y - 2)] = region[y];
                 }
     
                 data.push(rawDataItem);
