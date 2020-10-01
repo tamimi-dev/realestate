@@ -29,7 +29,7 @@ var options = {
     data: range_200_300
   }, {
     name: 'Average Sale Price Range 300K ~ 400K',
-    data: srange_300_400
+    data: range_300_400
   }, {
     name: 'Average Sale Price Range 400K ~ 500K',
     data: range_400_500
