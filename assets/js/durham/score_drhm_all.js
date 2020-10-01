@@ -4,7 +4,7 @@ FusionCharts.ready(function() {
         renderAt: 'chart-container_score',
         id: 'market_score',
        width: '300',
-        height: '190',
+        height: '200',
         dataFormat: 'json',
         dataSource: {
           "chart": {
