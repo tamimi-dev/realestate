@@ -8,12 +8,12 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1ghkpKiuX7ZdANRb6YhDLt9Sgd
      var range_700_800 = [];
     data.feed.entry.forEach(e => {
 
-      range_200_300.push(Number(e['rng200300drhmall']['$t']));
-      range_300_400.push(Number(e['rng300400drhmall']['$t']));
-      range_400_500.push(Number(e['rng400500drhmall']['$t']));
-      range_500_600.push(Number(e['rng500600drhmall']['$t']));
-      range_600_700.push(Number(e['rng600700drhmall']['$t']));
-      range_700_800.push(Number(e['rng700800drhmall']['$t']));
+      range_200_300.push(Number(e['gsx$rng200300drhmall']['$t']));
+      range_300_400.push(Number(e['gsx$rng300400drhmall']['$t']));
+      range_400_500.push(Number(e['gsx$rng400500drhmall']['$t']));
+      range_500_600.push(Number(e['gsx$rng500600drhmall']['$t']));
+      range_600_700.push(Number(e['gsx$rng600700drhmall']['$t']));
+      range_700_800.push(Number(e['gsx$rng700800drhmall']['$t']));
      
     }); 
 
